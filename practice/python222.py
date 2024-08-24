@@ -27,3 +27,13 @@ print(f)
 e.append(95)
 print(e)
 print(f)
+
+e = e+ [100]
+print(e)
+print(f)
+e = [100, 11, 12, 12]
+print(e)
+print(f)
+e.append(45)
+print(e)
+print(f)
