@@ -1,31 +1,33 @@
-# 시작 위치
-x, y = 0, 0
+user_input = ""
+X = 0
+Y = 0
 
+valid_inputs = ["EXIT", "UP", "DOWN", "LEFT","RIGHT"]
 
-def move_player(direction):
-    global x, y
+while user_input != "EXIT":
+    user_input = ""  # user_input 초기화
+    while user_input not in valid_inputs:
+        user_input = input("움직일 방향을 입력하세요 (종료는 EXIT) :: ")
 
-    if direction == "up":
-        if y < max_limit:
-            y += 1
+    if user_input == "UP":
+        if Y < 100:
+            Y = Y+1
         else:
-            print("잘못된 방향: 맵 밖으로 나갈 수 없습니다.")
-    elif direction == "down":
-        if y > min_limit:
-            y -= 1
+            print("map의 범위를 벗어날 수 없습니다.")
+    elif user_input == "DOWN":
+        if Y > 0:
+            Y = Y-1
         else:
-            print("잘못된 방향: 맵 밖으로 나갈 수 없습니다.")
-    elif direction == "left":
-        if x > min_limit:
-            x -= 1
+            print("map의 범위를 벗어날 수 없습니다.")
+    elif user_input =="LEFT":
+        if X>0:
+            X = X-1
         else:
-            print("잘못된 방향: 맵 밖으로 나갈 수 없습니다.")
-    elif direction == "right":
-        if x < max_limit:
-            x += 1
+            print("map의 범위를 벗어날 수 없습니다.")
+    elif user_input == "RIGHT":
+        if X < 100:
+            X = X+1
         else:
-            print("잘못된 방향: 맵 밖으로 나갈 수 없습니다.")
-    else:
-        print("잘못된 명령입니다. 'up', 'down', 'left', 'right' 중 하나를 입력하세요.")
-
-
+            print("map의 범위를 벗어날 수 없습니다.")
+    print("현재 위치 : (",X,",",Y,")" )
+print("프로그램을 종료합니다.")
