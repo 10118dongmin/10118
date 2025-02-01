@@ -23,3 +23,11 @@ elif inventory :
 
 #관리자 모드
 c = input("입력")
+
+
+# 각각의 dictionary
+inventory = {'coke':10, 'cider':5, 'choco-milk':3}
+price = {'coke':800, 'cider':700, 'choco-milk':1000}
+
+mode = "manager"
+
